@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backAbout {
+    background-image: url("./assets/images/about/about-bg.svg");
+    background-repeat: repeat-y;
+    background-position: bottom;
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.backAbout2 {
+    background-image: url("./assets/images/about/office_banner.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
