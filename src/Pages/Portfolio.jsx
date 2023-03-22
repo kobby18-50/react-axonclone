@@ -54,7 +54,7 @@ const Portfolio = () => {
         <div className="lg:mx-[200px] sm:mx-[30px]">
             {/* cards */}
 
-           <div className="grid lg:grid-cols-3">
+           <div className="grid lg:grid-cols-3 md:grid-cols-2">
             {
                 cards.map((card,map) => (
                     <div className="card lg:w-[400px] sm:w-[300px] my-5">

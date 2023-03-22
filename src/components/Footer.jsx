@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="lg:mx-[200px] sm:mx-10 text-white pt-[120px]">
 
 
-                <div className="grid lg:grid-cols-2 gap-5">
+                <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-5">
                     <div>
                         <figure>
                             <img src={AXON} alt="LOGO" className="max-w-[200px] mb-6" />
@@ -26,7 +26,7 @@ const Footer = () => {
 
                     
 
-                    <div className="grid lg:grid-cols-2 ">
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2">
                     <div>
                         <h1 className="font-semibold text-lg mb-9 ">
                             <Link to={'/about-us'}>About Us</Link>

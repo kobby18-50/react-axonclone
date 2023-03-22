@@ -133,12 +133,12 @@ const PortfolioComponent = () => {
                     index < 3
                 ))
                 .map((card,map) => (
-                    <div className="card lg:w-[400px] my-5">
+                    <div className="card lg:w-[400px]  my-5">
                         <figure>
-                            <img src={card.img} alt="cards" className="rounded-md" />
+                            <img src={card.img} alt="cards" className="rounded-md md:w-[600px]" />
                         </figure>
 
-                        <div className="-mt-[80px] border bg-white w-[80%] mx-10 py-10 px-3 rounded-lg text-center shadow-lg" >
+                        <div className="-mt-[80px] border bg-white lg:w-[80%] md:w-[60%] mx-10 py-10 px-3 rounded-lg text-center shadow-lg lg:ml-10 md:ml-[170px]" >
                             <h1 className="font-bold capitalize">{card.title}</h1>
                             <p className="text-primary text-sm mb-5">{card.sub}</p>
                             <button className="btn text-primary bg-white capitalize hover:bg-primary hover:text-white px-5 shadow-sm py-3 hover:shadow-lg border-gray-200">
@@ -168,7 +168,7 @@ const PortfolioComponent = () => {
                 <p className="text-lg text-body-color  sm:mx-10  lg:mx-[300px]">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
             </div>
 
-            <div className="grid lg:grid-cols-3 sm:mb-10 lg:space-x-10 my-[100px] lg:mx-[200px] sm:mx-10">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:mb-10 lg:space-x-10 my-[100px] lg:mx-[200px] sm:mx-10">
                 {/* card1 */}
                 <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px] sm:mb-10">
                     <div className="flex text-secondary">
@@ -256,12 +256,15 @@ const PortfolioComponent = () => {
                 
 
                 {/* end of cards */}
-                <div className="mt-[100px]">
+               
+            </div>
+
+            <div className="my-[100px] md:mx-20">
                     <div>
                         <h1 className="text-sm font-normal text-body-color">Some of Our Clients </h1>
                     </div>
 
-                    <div className="lg:flex sm:block ml-14 lg:space-x-14 sm:mx-20">
+                    <div className="lg:flex md:grid md:grid-cols-3 sm:block ml-14 lg:space-x-14 sm:mx-20">
                         {
                             clients.map((client,index) => (
                                 <div className="mt-5">
@@ -275,7 +278,6 @@ const PortfolioComponent = () => {
 
                    
                 </div>
-            </div>
            </div>
 
             {/* end of testimonials */}
@@ -360,7 +362,7 @@ const PortfolioComponent = () => {
 
                         <div className="py-20">
 
-                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px]">
+                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px] md:mx-[100px] md:max-w-2xl">
                         <h1 className="font-semibold mb-8 text-2xl">Send us a Message</h1>
  
                        <div className="mb-6">

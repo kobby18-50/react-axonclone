@@ -3,16 +3,35 @@ import Dotes1 from "../assets/images/hero/hero-img-dots1.svg"
 import Dotes2 from "../assets/images/hero/hero-img-dots2.svg"
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import WOW from "wowjs"
 
 
 const Hero = () => {
+
+//     const [anime,setAnime] = useState(false)
+
+//   const changeAnime = () => {
+//     if (window.scrollY >= 90){
+//       setAnime(true)
+//     }else{
+//       setAnime(false)
+//     }
+//   }
+
+//   window.addEventListener('scroll', changeAnime)
+
+useEffect(() =>{
+new WOW.WOW().init()
+},[])
+
     return ( 
         <div>
             <div>
-                <div className="top-0 bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2]">
+                <div className= "top-0 bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2]" >
                     <h1 className="text-[60px] sm:text-4xl sm:font-normal font-medium text-white  pt-[120px] text-center">
                       
-                      <h1 className="py-4">
+                      <h1 className="py-4 wow flipInY ">
                       Creating Digital Products 
                          <br />
                          From Innovative Ideas
@@ -45,9 +64,9 @@ const Hero = () => {
 
                     {/* start of hero img */}
 
-                    <div className="grid lg:grid-cols-2  bg-primary">
+                    <div className="grid lg:grid-cols-2  md:grid-cols-2 bg-primary">
 
-                        <img src={HeroImg} alt="" className="rounded-none" />
+                        <img src={HeroImg} alt="" className="md:h-full" />
 
                             {/* hero side text */}
                         <div className="text-white py-24 lg:px-[120px] sm:px-10">

@@ -15,8 +15,8 @@ const Carousel = () => {
     
     return ( 
         <>
-        <div className="">
-            <div className="lg:flex sm:hidden ">
+        <div className=" md:mx-[30px]">
+            <div className="lg:flex sm:hidden md:flex ">
                 <Link onClick={()=>setFilter('register')} className={`md:px-[70px] px-[150px] lg:py-4 font-semibold text-lg text-black cursor-pointer ${filter === 'register' ? isActive : "bg-gray-200 "}`}>
                 E-Register & E-Service Delivery
                 </Link>
@@ -27,7 +27,7 @@ const Carousel = () => {
                 onClick={()=>setFilter('retail')} className={`md:px-[70px] px-[150px] lg:py-4 font-semibold text-lg text-black ${filter === 'retail' ? isActive : "bg-gray-200"}`}>Retail & Ecommerce</Link>
             </div>
 
-            <div className="lg:hidden sm:block">
+            <div className="lg:hidden sm:flex md:hidden">
 
                 <div className="px-10">
                 <p className="my-12">
