@@ -4,6 +4,7 @@ import PAYROLL from "../assets/images/portfolio/axonpayroll_img.svg"
 import SSMAS from "../assets/images/portfolio/ssmas_img.svg"
 import HEALTH from "../assets/images/portfolio/healthpro_img.svg"
 import GWTS from "../assets/images/portfolio/gwts_img.svg"
+import BackToTopButton from "../components/BackToTopButton"
 const Portfolio = () => {
 
     const cards = [
@@ -74,6 +75,8 @@ const Portfolio = () => {
                 ))
             }
            </div>
+
+           <BackToTopButton/>
         </div>
      );
 }

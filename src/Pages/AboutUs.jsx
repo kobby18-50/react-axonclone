@@ -7,6 +7,7 @@ import Team2 from "../assets/images/team/team-02.png"
 import Team3 from "../assets/images/team/team-03.png"
 import { FaFacebookF,FaTwitter,FaInstagram} from "react-icons/fa";
 import { BsCheck2Circle } from "react-icons/bs";
+import BackToTopButton from "../components/BackToTopButton"
 
 
 
@@ -215,6 +216,7 @@ const AboutUs = () => {
 
                     
 
+            <BackToTopButton/>
                 </div>
             </div>
         </div>

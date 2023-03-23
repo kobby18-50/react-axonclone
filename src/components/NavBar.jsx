@@ -76,13 +76,14 @@ const NavBar = () => {
   
   return (
     <div className="">
+      <div className="">
       <div className="hidden lg:flex justify-between py-2 lg:mx-[200px]">
 <Link to={'/'}>
 <img src={AXON} alt="" className="w-[100px] " />
 </Link>
 
 <div>
-  <Link to={'/about-us'} className="btn bg-white text-primary capitalize border-gray-600 shadow-lg hover:bg-primary hover:text-white">
+  <Link to={'/contact-us'} className="btn bg-white text-primary capitalize border-gray-600 shadow-lg hover:bg-primary hover:text-white">
     Contact us
   </Link>
 </div>
@@ -99,7 +100,7 @@ const NavBar = () => {
         {
           navlinks.map((navlink,index)=> (
             <li tabIndex={0}>
-              <Link>{navlink.name}
+              <Link to={navlink.link}>{navlink.name}
               <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
               </Link>
 
@@ -114,13 +115,13 @@ const NavBar = () => {
           ))
         }
         
-        <li><Link>Services</Link></li>
+        <li><Link to={'/services'}>Services</Link></li>
           
 
         <li><Link to={'/portfolio'}>Portfolio</Link></li>
        
           <li tabIndex={0}>
-          <Link className="justify-between">
+          <Link to={'/company'} className="justify-between">
             our company
             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
           </Link>
@@ -143,15 +144,13 @@ const NavBar = () => {
         </li>
       </ul>
     </div>
-    {/* <a className="btn btn-ghost normal-case text-xl">
-      <img src={AXON} alt="" className="w-24" />
-    </a> */}
+   
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
 
     <li tabIndex={0}>
-        <Link className="text-white font-bold uppercase hover:text-secondary">
+        <Link className="text-white font-bold uppercase hover:text-secondary hover:bg-primary">
           Product & Solutions
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </Link>
@@ -164,28 +163,11 @@ const NavBar = () => {
          
         </ul>
       </li>
-      {/* {
-        navlinks.map((navlink,index) => (
-          <li>
-            <Link>{navlink.name}</Link>
-          </li>
-        ))
-      } */}
-      {/* <li><Link>Item 1</Link></li>
+     
+      <li className="text-white font-bold uppercase hover:text-secondary hover:bg-primary"><Link to={'/services'}>Services</Link></li>
+      <li className="text-white font-bold uppercase hover:text-secondary hover:bg-primary"><Link to={'/portfolio'}>Portfolio</Link></li>
       <li tabIndex={0}>
-        <a>
-          Parent
-          <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul className="p-2">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-        </ul>
-      </li> */}
-      <li className="text-white font-bold uppercase hover:text-secondary"><Link>Services</Link></li>
-      <li className="text-white font-bold uppercase hover:text-secondary"><Link>Portfolio</Link></li>
-      <li tabIndex={0}>
-        <Link className="text-white font-bold uppercase hover:text-secondary">
+        <Link to={'/company'} className="text-white font-bold uppercase hover:text-secondary hover:bg-primary">
           Our Company
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </Link>
@@ -198,13 +180,13 @@ const NavBar = () => {
       </li>
 
       <li tabIndex={0}>
-        <Link className="text-white font-bold uppercase hover:text-secondary">
+        <Link className="text-white font-bold uppercase hover:text-secondary hover:bg-primary">
          About us
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </Link>
         <ul className="p-2 bg-base-100 uppercase">
-          <li><Link>who we are</Link></li>
-          <li><Link>our team</Link></li>
+          <li><Link to={'/about-us'}>who we are</Link></li>
+          <li><Link to={'/about-us'}>our team</Link></li>
           
          
         </ul>
@@ -219,11 +201,10 @@ const NavBar = () => {
     </Link>
     </div>
 
-    {/* <div className="sm:hidden lg:flex">
-    buttton
-    </div> */}
+    
   </div>
 </div>
+    </div>
     </div>
   );
 };

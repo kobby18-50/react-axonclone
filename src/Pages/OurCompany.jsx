@@ -1,7 +1,11 @@
+import BackToTopButton from "../components/BackToTopButton";
+
 const OurCompany = () => {
     return (  
         <div>
-            our company
+            our compa
+
+            <BackToTopButton/>
         </div>
     );
 }

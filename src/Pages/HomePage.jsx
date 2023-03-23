@@ -1,3 +1,4 @@
+import BackToTopButton from "../components/BackToTopButton";
 import Hero from "../components/Hero";
 import PortfolioComponent from "../components/PortfolioComponent";
 import ProductComponent from "../components/ProductsComponent";
@@ -12,6 +13,8 @@ const Homepage = () => {
             <ProductComponent/>
 
             <PortfolioComponent/>
+
+            <BackToTopButton/>
           
         </div>
      );

@@ -1,5 +1,6 @@
 import { TfiLocationPin } from "react-icons/tfi";
 import { AiOutlineMail } from "react-icons/ai";
+import BackToTopButton from "../components/BackToTopButton";
 const Contact = () => {
     return ( 
         <div>
@@ -118,6 +119,8 @@ const Contact = () => {
                 </div>
                     </div>
                 </div>
+
+                <BackToTopButton/>
         </div>
      );
 }
