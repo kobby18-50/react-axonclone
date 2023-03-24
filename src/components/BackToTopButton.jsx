@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiVerticalTop } from "react-icons/bi";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const BackToTopButton = () => {
 
@@ -33,15 +34,15 @@ const BackToTopButton = () => {
             position : 'fixed',
             bottom : '50px',
             right : '50px',
-            height : '50px',
-            width : '50px',
-            fontSize : '50px'
+            height : '30px',
+            width : '30px',
+            fontSize : '30px'
         }}
         onClick={scrollUp}
 
-        className="bg-white text-primary transition duration-300 rounded-full hover:bg-secondary hover:text-primary"
+        className="bg-primary text-white  transition duration-300 rounded-lg hover:bg-secondary hover:text-primary"
         >
-            <BiVerticalTop/>
+            <AiOutlineArrowUp/>
         </button>
     )}
 </div>
