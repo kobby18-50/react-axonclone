@@ -14,3 +14,15 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+body{
+    font-size : 18px;
+    line-height: 28px;
+}
+
+.companybg{
+    background-image: url("./assets/images/about/feature-2.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
