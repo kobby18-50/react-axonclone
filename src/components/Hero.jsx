@@ -3,8 +3,9 @@ import Dotes1 from "../assets/images/hero/hero-img-dots1.svg"
 import Dotes2 from "../assets/images/hero/hero-img-dots2.svg"
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import WOW from "wowjs"
+import { useEffect } from "react";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 
 const Hero = () => {
@@ -22,16 +23,18 @@ const Hero = () => {
 //   window.addEventListener('scroll', changeAnime)
 
 useEffect(() =>{
-new WOW.WOW().init()
+AOS.init({
+    duration : 1500
+})
 },[])
 
     return ( 
         <div>
             <div>
                 <div className= "top-0 bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2]" >
-                    <h1 className="text-[60px] sm:text-4xl sm:font-normal font-medium text-white  pt-[120px] text-center">
+                    <h1 className="text-[60px] sm:text-4xl sm:font-normal font-medium text-white  pt-[120px] text-center" data-aos="fade-up">
                       
-                      <h1 className="py-4 wow flipInY ">
+                      <h1 className="py-4">
                       Creating Digital Products 
                          <br />
                          From Innovative Ideas

@@ -1,16 +1,28 @@
 import BackToTopButton from "../components/BackToTopButton";
 import Pic1 from "../assets/images/about/feature-3.svg";
-import Pic2 from "../assets/images/about/feature-2.svg";
 import LOGO from "../assets/images/logo/logo-white.png";
+
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
+
 const OurCompany = () => {
+
+  useEffect(()=>{
+    AOS.init({
+       duration : 1500
+    })
+ },[])
+
   return (
     <div>
       <div>
         <div>
           {/* hero */}
           <div className="backAbout2">
-            <div className=" text-center bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2] pt-[160px] pb-[100px] ">
-              <div className="">
+            <div className=" text-center bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2] pt-[160px] pb-[100px] " >
+              <div className=""  data-aos="fade-up">
                 <h1 className="font-bold text-3xl text-white mb-4">
                   Our Company
                 </h1>

@@ -1,7 +1,20 @@
 import { BsCheck2Circle } from "react-icons/bs";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import ServicesBG from "../assets/images/about/special_pattern.svg"
+// import ServicesBG from "../assets/images/about/special_pattern.svg"
+
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
 const ServicesComponent = () => {
+
+  useEffect(()=>{
+    AOS.init({
+       duration : 1500
+    })
+ },[])
+
+
   const collapses = [
     {
       title: "Enterprise Solution Development",
@@ -199,7 +212,7 @@ const ServicesComponent = () => {
 
           <div className="grid lg:grid-cols-2 gap-4">
             {collapses.map((collapse, index) => (
-              <div key={index} className="my-4">
+              <div key={index} className="my-4" data-aos="fade-up">
                 <div className="collapse collapse-arrow">
                   <input type="checkbox" className="peer" id="" />
                   <div className="collapse-title bg-white  text-primary peer-checked:bg-white text-lg peer-checked:text-primary rounded-lg">

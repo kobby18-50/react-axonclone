@@ -10,7 +10,7 @@ import { BsFillStarFill } from "react-icons/bs";
 
 import Testimonial1 from "../assets/images/testimonials/author-01.png"
 import Testimonial2 from "../assets/images/testimonials/author-02.png"
-import Testimonial3 from "../assets/images/testimonials/author-03.png"
+// import Testimonial3 from "../assets/images/testimonials/author-03.png"
 
 import EC from "../assets/images/clients/ec_banner.svg"
 import GRA from "../assets/images/clients/gra_banner.svg"
@@ -21,6 +21,10 @@ import MARITIME from '../assets/images/clients/maritime_banner.svg'
 
 import { TfiLocationPin } from "react-icons/tfi";
 import { AiOutlineMail } from "react-icons/ai";
+
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 
 const PortfolioComponent = () => {
@@ -100,8 +104,16 @@ const PortfolioComponent = () => {
             link : "https://ghanamaritime.org/home/"
         },
     ]
+
+    useEffect(()=>{
+        AOS.init({
+           duration : 1500
+        })
+     },[])
     return ( 
         <div>
+
+            
             <div className="lg:mx-[200px] sm:mx-10">
 
            <div className="mt-[100px]">
@@ -127,13 +139,13 @@ const PortfolioComponent = () => {
 
             {/* cards */}
 
-           <div className="grid lg:grid-cols-3">
+           <div className="grid lg:grid-cols-3 md:gap-[100px]">
             {
                 cards.filter((card,index)=>(
                     index < 3
                 ))
                 .map((card,map) => (
-                    <div className="card lg:w-[400px]  my-5">
+                    <div className="card lg:w-[400px]  my-5 ">
                         <figure>
                             <img src={card.img} alt="cards" className="rounded-md md:w-[600px]" />
                         </figure>
@@ -170,7 +182,7 @@ const PortfolioComponent = () => {
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:mb-10 lg:space-x-10 my-[100px] lg:mx-[200px] sm:mx-10">
                 {/* card1 */}
-                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px] sm:mb-10">
+                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px] sm:mb-10" data-aos="fade-up" >
                     <div className="flex text-secondary">
                         <div><BsFillStarFill/></div>
                         <div><BsFillStarFill/></div>
@@ -200,7 +212,7 @@ const PortfolioComponent = () => {
 
                 {/* card2 */}
 
-                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px]  sm:mb-10">
+                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px]  sm:mb-10 " data-aos="fade-up">
                     <div className="flex text-secondary">
                         <div><BsFillStarFill/></div>
                         <div><BsFillStarFill/></div>
@@ -228,7 +240,7 @@ const PortfolioComponent = () => {
 
 
                 {/* card 3 */}
-                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px] ">
+                <div className="shadow-lg bg-white p-4 lg:max-w-md sm:max-w-xs max-h-[200px] " data-aos="fade-up">
                     <div className="flex text-secondary">
                         <div><BsFillStarFill/></div>
                         <div><BsFillStarFill/></div>
@@ -267,7 +279,7 @@ const PortfolioComponent = () => {
                     <div className="lg:flex md:grid md:grid-cols-3 sm:block ml-14 lg:space-x-14 sm:mx-20">
                         {
                             clients.map((client,index) => (
-                                <div className="mt-5">
+                                <div className="mt-5" data-aos="fade-up">
                                     <Link to={client.link}>
                                         <img src={client.logo} alt="logo" className="max-w-[140px] grayscale hover:filter-none hover:transition hover:duration-300 hover:ease-in-out" />
                                     </Link>
@@ -362,7 +374,7 @@ const PortfolioComponent = () => {
 
                         <div className="py-20">
 
-                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px] md:mx-[100px] md:max-w-2xl">
+                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px] md:mx-[100px] md:max-w-2xl" data-aos="fade-up">
                         <h1 className="font-semibold mb-8 text-2xl">Send us a Message</h1>
  
                        <div className="mb-6">

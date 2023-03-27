@@ -3,9 +3,21 @@ import AXON from "../assets/images/logo/logo-white.png"
 import { FaFacebookF,FaTwitter,FaInstagram,FaLinkedin} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
 const Footer = () => {
+
+    useEffect(()=>{
+        AOS.init({
+           duration : 1500
+        })
+     },[])
+
+
     return ( 
-        <div className="bg-black">
+        <div className="bg-black" data-aos="fade-up">
             <div className="lg:mx-[200px] sm:mx-10 text-white pt-[120px]">
 
 

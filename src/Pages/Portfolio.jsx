@@ -52,6 +52,20 @@ const Portfolio = () => {
     ]
     
     return ( 
+        <div>
+             <div className="backAbout2" >
+            <div className=" text-center bg-gradient-to-bl from-[#188FC3]/80 via-[#1E67C2]/90 to-[#1E67C2] pt-[160px] pb-[100px] " >
+              <div className="" data-aos="fade-up">
+                <h1 className="font-bold text-3xl text-white mb-4">
+                  Our Portfolio
+                </h1>
+                <p className="text-lg text-white sm:mx-[30px]">
+                  We have built more than 50 state-of-art registers, information systems & delivered other projects across 4 countries
+                </p>
+              </div>
+            </div>
+          </div>
+        
         <div className="lg:mx-[200px] sm:mx-[30px]">
             {/* cards */}
 
@@ -77,6 +91,7 @@ const Portfolio = () => {
            </div>
 
            <BackToTopButton/>
+        </div>
         </div>
      );
 }
