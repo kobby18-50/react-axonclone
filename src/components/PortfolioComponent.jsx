@@ -374,7 +374,7 @@ const PortfolioComponent = () => {
 
                         <div className="py-20">
 
-                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px] md:mx-[100px] md:max-w-2xl" data-aos="fade-up">
+                    <form className="shadow-lg rounded-lg bg-white py-10 px-8 lg:max-w-md sm:max-w-xs sm:mx-10 lg:-mt-[400px] sm:-mt-[100px]  " data-aos="fade-up">
                         <h1 className="font-semibold mb-8 text-2xl">Send us a Message</h1>
  
                        <div className="mb-6">
